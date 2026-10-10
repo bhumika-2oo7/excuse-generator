@@ -16,5 +16,5 @@ A simple website that shows a random funny excuse when you click a button.
  
 ## Live demo
  
-https://your-username.github.io/your-repo-name/
+https://bhumika-2oo7.github.io/excuse-generator/
  
