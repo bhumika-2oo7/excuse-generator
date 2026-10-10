@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Excuse Generator</title>
+ 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff4d6;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    #excuse {
+      background: white;
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 12px;
+      font-size: 1.4rem;
+    }
+    button {
+      font-size: 1.1rem;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      background: #e4572e;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #b8401f;
+    }
+  </style>
+</head>
+ 
+<body>
+  <h1>Excuse Generator</h1>
+  <p>Late? Forgot homework? Click the button.</p>
+ 
+  <div id="excuse">Your excuse will appear here.</div>
+  <button id="btn">Give me an excuse</button>
+ 
+  <script>
+    const excuses = [
+      "My cat sat on my keyboard and deleted everything.",
+      "I was stuck in a lift with a very talkative stranger.",
+      "My alarm rang, but I think it was in a different timezone.",
+      "A monkey stole my bag on the way here.",
+      "The internet went down, so I had to walk to the internet.",
+      "I was busy saving the world, but nobody noticed.",
+      "My dog ate it. Yes, even the laptop."
+    ];
+ 
+    const button = document.getElementById("btn");
+    const box = document.getElementById("excuse");
+ 
+    button.addEventListener("click", function () {
+      const number = Math.floor(Math.random() * excuses.length);
+      box.textContent = excuses[number];
+    });
+  </script>
+</body>
+</html>
